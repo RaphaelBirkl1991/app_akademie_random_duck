@@ -19,10 +19,17 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             const Text("HomeScreen"),
             OutlinedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "/gif_screen");
-                },
-                child: const Text("Show me GIFs"))
+              onPressed: () {
+                Navigator.pushNamed(context, "/gif_screen");
+              },
+              child: const Text("Show me GIFs"),
+            ),
+            OutlinedButton(
+              onPressed: () {
+                //   Navigator
+              },
+              child: const Text("Show me Duck Pics"),
+            ),
           ],
         ),
       ),

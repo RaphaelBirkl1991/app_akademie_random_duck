@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:random_duck/gif_screen.dart';
 import 'package:random_duck/home_screen.dart';
+import 'package:random_duck/img_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -19,6 +20,7 @@ class _MainAppState extends State<MainApp> {
     return MaterialApp(initialRoute: "/", routes: {
       "/": (context) => const HomeScreen(),
       "/gif_screen": (context) => const GifScreen(),
+      "/img_screen": (context) => const ImageScreen(),
     });
   }
 }
