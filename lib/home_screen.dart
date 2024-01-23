@@ -8,6 +8,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  String imgUrl = "https://random-d.uk/api/v2/5.jpg";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,22 +16,25 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           title: const Text("Random Duck"),
         ),
-        body: Column(
-          children: [
-            const Text("HomeScreen"),
-            OutlinedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, "/gif_screen");
-              },
-              child: const Text("Show me GIFs"),
-            ),
-            OutlinedButton(
-              onPressed: () {
-                //   Navigator
-              },
-              child: const Text("Show me Duck Pics"),
-            ),
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.network(imgUrl),
+              OutlinedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, "/gif_screen");
+                },
+                child: const Text("Show me GIFs"),
+              ),
+              OutlinedButton(
+                onPressed: () {
+                  //   Navigator
+                },
+                child: const Text("Show me Duck Pics"),
+              ),
+            ],
+          ),
         ),
       ),
     );

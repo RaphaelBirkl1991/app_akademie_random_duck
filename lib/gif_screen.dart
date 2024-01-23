@@ -40,14 +40,23 @@ class _GifScreenState extends State<GifScreen> {
           //  Container(
           // child: Image.network("https://random-d.uk/api/v2/randomimg"),
           //  child:
-          Image.network(gifUrl),
+          Center(
+              child: SizedBox(
+                  height: 600, width: 400, child: Image.network(gifUrl))),
           //   ),
-          OutlinedButton(
-              onPressed: () {
-                gifUrl = getRandomGifUrl();
-                setState(() {});
-              },
-              child: const Text("Show another GIF"))
+
+          SizedBox(
+            height: 50,
+            width: 300,
+            child: Center(
+              child: OutlinedButton(
+                  onPressed: () {
+                    gifUrl = getRandomGifUrl();
+                    setState(() {});
+                  },
+                  child: const Text("Show another GIF")),
+            ),
+          )
         ],
       ),
     );
